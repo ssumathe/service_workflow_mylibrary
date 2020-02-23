@@ -8,10 +8,9 @@ def call(body) {
     def folderName = "MyFolder"
     def buildCommands = config.buildCommands
     println "folderName: " + folderName
-    println"buildCommand is " + buildCommands
+    println "buildCommand is " + buildCommands
     
-    buildNode
-        {
+    buildNode {
         buildC = buildCommands
         }
     }
