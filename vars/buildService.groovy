@@ -6,7 +6,8 @@ def call(body) {
     node {
        // def branch = ${env.BRANCH_NAME}
     def buildCommands = config.buildCommands
-     branch= $BRANCH_NAME
+   envconfig =  env.getEnvironment()
+        
      println branch
     println "branch: " + branch
     println "buildCommand is " + buildCommands
