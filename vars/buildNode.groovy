@@ -1,6 +1,6 @@
 def call(body) {
 def config = [:]
-body.resolveStrategy=Clousure.DELEGATE_FIRST
+body.resolveStrategy = Closure.DELEGATE_FIRST
 body.delegate= config
 body()
 def folder ="my folder in build groovy file"
