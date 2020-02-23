@@ -4,9 +4,9 @@ def call(body) {
     body.delegate = config
     body()
     node {
-    def folderName = common.getFolder()
+        def branch = ${env.BRANCH_NAME}
     def buildCommands = config.buildCommands
-    println "folderName: " + folderName
+    println "branch: " + branch
     println "buildCommand is " + buildCommands
 
     buildNode {
