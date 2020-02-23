@@ -13,12 +13,4 @@ def call(body) {
     buildNode(buildCommands)
     }
 }
-    def buildNode(buildCommands){
-        
-    stage('Application Build') {
-    
-    sh "${buildCommands}"
-    
-    println "InSide buildNode"
-    }
-    }
+    build.buildJava(buildCommands)
