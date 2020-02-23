@@ -13,4 +13,4 @@ def call(body) {
     buildNode(buildCommands)
     }
 }
-    build.buildJava(buildCommands)
+    
