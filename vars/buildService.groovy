@@ -7,9 +7,10 @@ def call(body) {
        // def branch = ${env.BRANCH_NAME}
     def buildCommands = config.buildCommands
         sh "export BRANCH_NAME=${env.BRANCH_NAME}"
-        if (BRANCH_NAME==master){
+        sh 'echo $BRANCH_NAME'
+        
         name= "master"
-        }
+        
         name="nonmaster"
    envconfig =  env.BRANCH_NAME
         
