@@ -6,7 +6,8 @@ def call(body) {
     node {
        // def branch = ${env.BRANCH_NAME}
     def buildCommands = config.buildCommands
-        if (${env.BRANCH_NAME}==master){
+        sh "export BRANCH_NAME=${env.BRANCH_NAME}"
+        if (BRANCH_NAME==master){
         name= "master"
         }
         name="nonmaster"
