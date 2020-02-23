@@ -5,16 +5,4 @@ def call(body) {
     body.delegate = config
     body()
     def folderName = "MyFolder"
-    def buildCommands = config.buildCommands
-    println "folderName: " + folderName
-    buildNode(buildCommands)
-    }
-    def buildNode(buildCommands){
-        
-    stage('Application Build') {
-    
-    sh "${buildCommands}"
-    
-    println "InSide buildNode"
-    }
-    }
+}
