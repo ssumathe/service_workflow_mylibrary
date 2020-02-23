@@ -8,14 +8,14 @@ def call(body) {
     def buildCommands = config.buildCommands
         sh "export BRANCH_NAME=${env.BRANCH_NAME}"
         sh 'echo $BRANCH_NAME'
-        
+        branch =  ${BRANCH_NAME}
         name= "master"
         
         name="nonmaster"
    envconfig =  env.BRANCH_NAME
         
-     println branch
-    println "branch: " + branch
+    
+   print "Branch: ${BRANCH_NAME}"
     println "buildCommand is " + buildCommands
 
     buildNode {
