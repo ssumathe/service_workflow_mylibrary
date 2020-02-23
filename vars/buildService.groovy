@@ -8,7 +8,6 @@ def call(body) {
     def buildCommands = config.buildCommands
         sh "export BRANCH_NAME=${env.BRANCH_NAME}"
         sh 'echo $BRANCH_NAME'
-     def branchdef =  ${env.BRANCH_NAME}
        
         name= "master"
         
