@@ -6,7 +6,11 @@ def call(body) {
     node {
        // def branch = ${env.BRANCH_NAME}
     def buildCommands = config.buildCommands
-   envconfig =  env.getEnvironment()
+        if (env.BRANCH_NAME==master){
+        name= "master"
+        }
+        name="nonmaster"
+   envconfig =  env.BRANCH_NAME
         
      println branch
     println "branch: " + branch
