@@ -10,6 +10,6 @@ def buildCommands = config.buildC
 }
 def buildJava(buildCommands) {
   stage("Application build") {
-    buildCommands
+   sh  "${buildCommands}"
 }
 }
