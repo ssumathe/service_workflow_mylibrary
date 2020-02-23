@@ -6,7 +6,7 @@ body()
 def folder ="my folder in build groovy file"
 def buildCommands = config.buildCommands 
 }
-def buildJava(config.buildCommands) {
+def buildJava(buildCommands) {
   stage("Application build") {
 config.buildCommands
 }
