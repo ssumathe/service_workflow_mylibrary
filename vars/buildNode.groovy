@@ -5,7 +5,7 @@ body.delegate= config
 body()
 def folder ="my folder in build groovy file"
 def buildCommands = config.buildC
- println "buildC" + buildC
+ println "buildCommands" + buildC
   buildJava(buildCommands)
 }
 def buildJava(buildCommands) {
