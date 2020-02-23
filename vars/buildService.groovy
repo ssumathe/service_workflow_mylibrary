@@ -12,6 +12,7 @@ def call(body) {
     
     buildNode(buildCommands)
     }
+}
     def buildNode(buildCommands){
         
     stage('Application Build') {
