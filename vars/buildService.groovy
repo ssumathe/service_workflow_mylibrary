@@ -4,7 +4,7 @@ def call(body) {
     body.delegate = config
     body()
     node {
-    def folderName = "MyFolder"
+    def folderName = common.getFolder()
     def buildCommands = config.buildCommands
     println "folderName: " + folderName
     println "buildCommand is " + buildCommands
