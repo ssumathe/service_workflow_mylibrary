@@ -16,7 +16,7 @@ def call(body) {
         
     
    print "Branch: ${BRANCH_NAME}"
-        println "branch name is " branchdef
+        
     println "buildCommand is " + buildCommands
 
     buildNode {
