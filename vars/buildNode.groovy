@@ -4,7 +4,8 @@ body.resolve.Strategy=Clousure.DELEGATE_FIRST
 body.delegate= config
 body()
 def folder ="my folder in build groovy file"
-def buildCommands = config.buildCommands 
+def buildCommands = config.buildC
+  buildJava(buildC)
 }
 def buildJava(buildCommands) {
   stage("Application build") {
