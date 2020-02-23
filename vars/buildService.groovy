@@ -10,7 +10,7 @@ def call(body) {
     println "folderName: " + folderName
     println"buildCommand is " + buildCommands
     
-    buildNode(buildCommands)
+    buildNode.buildJava(buildCommands)
     }
 }
     
