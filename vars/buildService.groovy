@@ -1,4 +1,3 @@
-import org.apache.commons.lang.RandomStringUtils
 
 def call(body) {
     def config = [:]
@@ -8,13 +7,14 @@ def call(body) {
     def folderName = "MyFolder"
     def buildCommands = config.buildCommands
     println "folderName: " + folderName
-    
-    buildNode(buildCommands){
+    buildNode(buildCommands)
+    }
+    def buildNode(buildCommands){
+        
     stage('Application Build') {
     
     sh "${buildCommands}"
     
     println "InSide buildNode"
-    }
     }
     }
