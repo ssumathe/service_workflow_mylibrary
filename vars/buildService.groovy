@@ -3,24 +3,17 @@ def call(body) {
     body.resolveStrategy = Closure.DELEGATE_FIRST
     body.delegate = config
     body()
-    node {
-        def branch = ${env.BRANCH_NAME}
+    def folderName = "MyFolder"
     def buildCommands = config.buildCommands
-        sh "export BRANCH_NAME=${env.BRANCH_NAME}"
-        sh 'echo $BRANCH_NAME'
-       
-        name= "master"
+    println "folderName: " + folderName
+    buildNode(buildCommands)
+    }
+    def buildNode(buildCommands){
         
-        name="nonmaster"
-  // envconfig =  env.BRANCH_NAME
-        
+    stage('Application Build') {
     
-   print "Branch: ${BRANCH_NAME}"
-        
-    println "buildCommand is " + buildCommands
-
-    //buildNode {
-      //  buildC = buildCommands
-        //}
-}  
-}
+    sh "${buildCommands}"
+    
+    println "InSide buildNode"
+    }
+    }
