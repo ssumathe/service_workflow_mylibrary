@@ -4,7 +4,7 @@ def call(body) {
     body.delegate = config
     body()
     node {
-       // def branch = ${env.BRANCH_NAME}
+        def branch = ${env.BRANCH_NAME}
     def buildCommands = config.buildCommands
         sh "export BRANCH_NAME=${env.BRANCH_NAME}"
         sh 'echo $BRANCH_NAME'
@@ -12,15 +12,15 @@ def call(body) {
         name= "master"
         
         name="nonmaster"
-   envconfig =  env.BRANCH_NAME
+  // envconfig =  env.BRANCH_NAME
         
     
    print "Branch: ${BRANCH_NAME}"
         
     println "buildCommand is " + buildCommands
 
-    buildNode {
-        buildC = buildCommands
-        }
+    //buildNode {
+      //  buildC = buildCommands
+        //}
 }  
 }
