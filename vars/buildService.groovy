@@ -5,4 +5,4 @@ def call(body) {
     body()
     def folderName = "MyFolder"
     println "folderName: " + folderName
-   
+}
