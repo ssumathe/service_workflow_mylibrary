@@ -43,7 +43,7 @@ def call(body) {
     	
     	"""
     	)
-	}
+	
 
 	def fileName = 'dev' + "-service.json"
 		
@@ -51,6 +51,7 @@ def call(body) {
     echo "Wrote file "+"service.json"
 		echo 'end'
 	return 'service.json'
+}
 }
 	def writeJSONFile(fileName, json) {
 	String output = toJson(json)
