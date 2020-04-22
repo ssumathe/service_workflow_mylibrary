@@ -13,11 +13,32 @@ def call(body) {
     """
     {
     	  "apiVersion": "v1",
-    	  "kind": "Service"
+    	  "kind": "Service",
+    	  "metadata": {
+    	    "name": "deployName",
+    	    "namespace": "ns1",
+    	    "annotations": {
+    	        "prometheus.io/scrape": "true",
+    	        "prometheus.io/path": "/prometheus"
+    	    },
+    	    "labels": {
+    	      "context": "/",
+    	      "hystrix.cluster": "default"
+    	    }
+    	  },
+    	  "spec": {
+    	    "ports": [
+    	      {
+    	    	"name": "http",
+    	        "port": 8080,
+    	        "targetPort": 8080
+    	      }
+    	    ],
+    	    "selector": {
+    	      "app": "myservice"
+    	    }
+    	  }
     	}
-	
-        """
-        )
 	def fileName = 'dev' + "-service.json"
     common.writeJSONFile(fileName, json)
     echo "Wrote file "+"service.json"
