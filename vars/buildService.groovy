@@ -1,4 +1,3 @@
-import groovy.json.JsonBuilder
 import groovy.json.JsonSlurperClassic
 def call(body) {
     def config = [:]
