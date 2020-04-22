@@ -1,4 +1,5 @@
 import groovy.json.JsonSlurperClassic
+import groovy.json.JsonBuilder
 def call(body) {
     def config = [:]
     body.resolveStrategy = Closure.DELEGATE_FIRST
@@ -42,13 +43,15 @@ def call(body) {
     	
     	"""
     	)
+	}
+
 	def fileName = 'dev' + "-service.json"
 		
     writeJSONFile(fileName, json)
     echo "Wrote file "+"service.json"
 		echo 'end'
 	return 'service.json'
-		
+}
 	def writeJSONFile(fileName, json) {
 	String output = toJson(json)
 	echo fileName
@@ -66,9 +69,3 @@ def toJson(obj){
 		//sh "hostname"
 	//sh "ls -l"
 	//sh "kubectl apply ."
-	
-        
-  
-   
-}
-}
