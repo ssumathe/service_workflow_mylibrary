@@ -51,5 +51,6 @@ def call(body) {
 	return 'service.json'
 
     sh "kubectl apply ."
+   echo 'end'
 }
 }
