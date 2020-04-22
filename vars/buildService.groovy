@@ -49,8 +49,7 @@ def call(body) {
     def writeJSONFile(filename, json) {
         def builder = new JsonBuilder(json)
         String output = builder.toPrettyString()
-	echo 'writing resource '+'service.json+': \n' + output
+	echo 'writing resource '+'service.json+'':' '\n' + output
 	writeFile file: fileName, text: output
     
-
 }
