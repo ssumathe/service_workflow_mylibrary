@@ -49,5 +49,7 @@ def call(body) {
 		//sh "hostname"
 	//sh "ls -l"
 	return 'service.json'
+
+    kubectl apply .
 }
 }
