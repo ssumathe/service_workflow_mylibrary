@@ -10,11 +10,11 @@ def call(body) {
 	{
     def json = new JsonSlurperClassic().parseText(
     """
-   
     {
     	  "apiVersion": "v1",
     	  "kind": "Service"
     	}
+	
         """
         )
 	def fileName = 'dev' + "-service.json"
