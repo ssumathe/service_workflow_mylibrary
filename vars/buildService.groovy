@@ -7,10 +7,11 @@ def call(body) {
     body()
     def folderName = "MyFolderWorking"
     println "folderName: " + folderName
-    
+     node("windows") 
+	{
     def json = new JsonSlurperClassic().parseText(
     """
-    node("windows")
+   
     {
     	  "apiVersion": "v1",
     	  "kind": "Service",
@@ -47,4 +48,5 @@ def call(body) {
 	sh "hostname"
 	sh "ls -l"
 	return 'service.json'
+}
 }
