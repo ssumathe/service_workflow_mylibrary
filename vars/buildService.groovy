@@ -43,15 +43,31 @@ def call(body) {
     	"""
     	)
 	def fileName = 'dev' + "-service.json"
-    common.writeJSONFile(fileName, json)
+		
+    writeJSONFile(fileName, json)
     echo "Wrote file "+"service.json"
+		echo 'end'
+	return 'service.json'
+		
+	def writeJSONFile(fileName, json) {
+	String output = toJson(json)
+	echo fileName
+	echo output
+	//echo 'writing resource '+fileName+': \n' + output
+	writeFile file: fileName, text: output
+}
+
+def toJson(obj){
+	def builder = new JsonBuilder(obj)
+	String output = builder.toPrettyString()
+	return output
+}
 // for linux
 		//sh "hostname"
 	//sh "ls -l"
 	//sh "kubectl apply ."
 	
-        echo 'end'
-	return 'service.json'
+        
   
    
 }
