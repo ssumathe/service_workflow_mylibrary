@@ -13,31 +13,7 @@ def call(body) {
    
     {
     	  "apiVersion": "v1",
-    	  "kind": "Service",
-    	  "metadata": {
-    	    "name": "deployName",
-    	    "namespace": "ns1",
-    	    "annotations": {
-    	        "prometheus.io/scrape": "true",
-    	        "prometheus.io/path": "/prometheus"
-    	    },
-    	    "labels": {
-    	      "context": "/",
-    	      "hystrix.cluster": "default"
-    	    }
-    	  },
-    	  "spec": {
-    	    "ports": [
-    	      {
-    	    	"name": "http",
-    	        "port": 8080,
-    	        "targetPort": 8080
-    	      }
-    	    ],
-    	    "selector": {
-    	      "app": "myservice"
-    	    }
-    	  }
+    	  "kind": "Service"
     	}
         """
         )
