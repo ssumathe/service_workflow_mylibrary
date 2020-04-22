@@ -8,6 +8,7 @@ def call(body) {
     println "folderName: " + folderName
      node("windows") 
 	{
+    @NonCPS
     def json = new JsonSlurperClassic().parseText(
     """
     {
