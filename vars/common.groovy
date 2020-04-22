@@ -2,7 +2,7 @@
 import groovy.json.JsonSlurperClassic
  
  def writeJSONFile(fileName, json) {
-        def builder = new JsonBuilder(json)
+        def builder = new groovy.json.JsonBuilder(json)
         String output = builder.toPrettyString()
 	echo output
 	echo fileName 
