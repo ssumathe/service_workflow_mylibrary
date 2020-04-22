@@ -10,6 +10,7 @@ def call(body) {
     
     def json = new JsonSlurperClassic().parseText(
     """
+    node() {
     {
     	  "apiVersion": "v1",
     	  "kind": "Service",
@@ -48,3 +49,4 @@ def call(body) {
 	return 'service.json'
 }
    
+}
