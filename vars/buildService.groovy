@@ -41,17 +41,10 @@ def call(body) {
         """
         )
 	def fileName = 'dev' + "-service.json"
-    writeJSONFile(fileName, json)
+    common.writeJSONFile(fileName, json)
     echo "Wrote file "+"service.json"
 	sh "hostname"
 	sh "ls -l"
 	return 'service.json'
 }
-    def writeJSONFile(fileName, json) {
-        def builder = new JsonBuilder(json)
-        String output = builder.toPrettyString()
-	echo output
-	//echo 'writing resource '+'service.json' + ':' '\n' + output
-	writeFile file: fileName, text: output
-    
-}
+   
