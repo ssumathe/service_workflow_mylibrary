@@ -48,8 +48,8 @@ def call(body) {
 // for linux
 		//sh "hostname"
 	//sh "ls -l"
-	sh "kubectl apply ."
-	dir
+	//sh "kubectl apply ."
+	
         echo 'end'
 	return 'service.json'
   
