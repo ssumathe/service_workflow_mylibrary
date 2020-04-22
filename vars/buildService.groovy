@@ -13,15 +13,14 @@ def call(body) {
     	  "apiVersion": "v1",
     	  "kind": "Service",
     	  "metadata": {
-    	    "name": "${deployName}",
-    	    "namespace": "${config.namespace}",
+    	    "name": "deployName",
+    	    "namespace": "ns1",
     	    "annotations": {
     	        "prometheus.io/scrape": "true",
-    	        "prometheus.io/path": "${externalContextPath}/prometheus"
+    	        "prometheus.io/path": "/prometheus"
     	    },
     	    "labels": {
-    	      "context": "${config.context}",
-    	      "hystrix.enabled": "${isHystrixEnabled}",
+    	      "context": "/",
     	      "hystrix.cluster": "default"
     	    }
     	  },
@@ -30,11 +29,11 @@ def call(body) {
     	      {
     	    	"name": "http",
     	        "port": 8080,
-    	        "targetPort": ${appPort}
+    	        "targetPort": 8080
     	      }
     	    ],
     	    "selector": {
-    	      "app": "${deployName}"
+    	      "app": "myservice"
     	    }
     	  }
     	}
