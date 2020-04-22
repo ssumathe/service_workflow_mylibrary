@@ -48,5 +48,3 @@ def call(body) {
 	sh "ls -l"
 	return 'service.json'
 }
-   
-}
