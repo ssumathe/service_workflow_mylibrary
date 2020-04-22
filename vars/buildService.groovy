@@ -10,7 +10,7 @@ def call(body) {
     
     def json = new JsonSlurperClassic().parseText(
     """
-    node() {
+    node() 
     {
     	  "apiVersion": "v1",
     	  "kind": "Service",
