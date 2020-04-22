@@ -50,6 +50,6 @@ def call(body) {
 	//sh "ls -l"
 	return 'service.json'
 
-    kubectl apply .
+    sh "kubectl apply ."
 }
 }
