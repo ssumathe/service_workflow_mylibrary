@@ -21,8 +21,9 @@ def call(body) {
 	def fileName = 'dev' + "-service.json"
     common.writeJSONFile(fileName, json)
     echo "Wrote file "+"service.json"
-	sh "hostname"
-	sh "ls -l"
+// for linux
+		//sh "hostname"
+	//sh "ls -l"
 	return 'service.json'
 }
 }
