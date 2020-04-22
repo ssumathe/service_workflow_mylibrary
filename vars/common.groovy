@@ -4,6 +4,7 @@ import groovy.json.JsonSlurperClassic
 def writeJSONFile(fileName, json) {
 	String output = toJson(json)
 	echo fileName
+	echo output
 	//echo 'writing resource '+fileName+': \n' + output
 	writeFile file: fileName, text: output
 }
