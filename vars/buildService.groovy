@@ -3,6 +3,6 @@ def call(body) {
     body.resolveStrategy = Closure.DELEGATE_FIRST
     body.delegate = config
     body()
-    def folderName = "MyFolder"
+    def folderName = "MyFolderWorking"
     println "folderName: " + folderName
 }
