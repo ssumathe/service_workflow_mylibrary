@@ -8,7 +8,7 @@ def call(body) {
     println "folderName: " + folderName
      node("windows") 
 	{
-    @NonCPS
+    
     def json = new JsonSlurperClassic().parseText(
     """
     {
@@ -39,6 +39,9 @@ def call(body) {
     	    }
     	  }
     	}
+    	
+    	"""
+    	)
 	def fileName = 'dev' + "-service.json"
     common.writeJSONFile(fileName, json)
     echo "Wrote file "+"service.json"
