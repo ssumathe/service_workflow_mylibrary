@@ -47,7 +47,7 @@ def call(body) {
 	return "service.json"
 }
     def writeJSONFile(filename, json) {
-        def builder = new JsonBuilder(obj)
+        def builder = new JsonBuilder(json)
         String output = builder.toPrettyString()
 	echo 'writing resource '+service.json+': \n' + output
 	writeFile file: fileName, text: output
