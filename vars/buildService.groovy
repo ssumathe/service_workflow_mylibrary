@@ -51,6 +51,6 @@ def call(body) {
         String output = builder.toPrettyString()
 	echo output
 	//echo 'writing resource '+'service.json' + ':' '\n' + output
-	writeFile file: fileName, text: output
+	writeFile file: filename, text: output
     
 }
